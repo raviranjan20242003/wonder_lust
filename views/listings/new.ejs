@@ -6,7 +6,9 @@
     <title>wanderlust</title>
 </head>
 <body>
-       <form method="POST" action="/listings">
+    <!-- Listing creation form; nested names become req.body.listing in Express. -->
+       <!-- Submit the new listing fields to the POST /listings route. -->
+    <form method="POST" action="/listings">
         <input name="listing[title]" placeholder="enter title" type="text" required>
         <br><br>
         <textarea name="listing[description]" placeholder="enter description"></textarea>

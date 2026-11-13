@@ -1,3 +1,4 @@
+// Sample accommodation records used to populate the database during initialization.
 const sampleListings = [
   {
     title: "Cozy Beachfront Cottage",
@@ -349,4 +350,5 @@ const sampleListings = [
   },
 ];
 
+// Export the seed records for init/index.js.
 module.exports = { data: sampleListings };

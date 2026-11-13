@@ -6,7 +6,9 @@
     <title>wanderlust</title>
 </head>
 <body>
+    <!-- Pre-fill the form with the existing listing so its fields can be updated. -->
     <h3>Edit your listings</h3>
+       <!-- method-override converts the browser POST into a PUT request. -->
        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
         <input name="listing[title]" value="<%= listing.title %>" type="text" required>
         <br><br>

@@ -1,4 +1,5 @@
 
+// Mongoose schema describing the fields stored for each accommodation listing.
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -9,6 +10,7 @@ const listingSchema = new Schema({
     },
     description: String,
 
+    // Keep image metadata and its URL together in a nested object.
     image: {
         filename: {
             type: String,
@@ -25,5 +27,6 @@ const listingSchema = new Schema({
     country: String
 });
 
+// Create and export the model used by routes and database initialization.
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;

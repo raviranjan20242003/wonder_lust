@@ -1,3 +1,4 @@
+// Connect to the same database used by the Express application.
 const mongoose = require("mongoose");
 const initData  =require ("./data.js");
 const Listing = require("../models/listing.js");
@@ -13,6 +14,7 @@ async function main() {
     await mongoose.connect(MONGO_URL);
 }
 
+// Replace the current collection contents with the sample listings.
 const initDB=async()=>{
     await Listing.deleteMany({});
     await Listing.insertMany(initData.data);

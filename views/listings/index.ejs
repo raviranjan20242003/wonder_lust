@@ -6,11 +6,13 @@
     <title>wanderlust</title>
 </head>
 <body>
+    <!-- Listing index: provides navigation to the creation form and links to each listing. -->
     <h3>All Listings</h3>
     <form method="get" action="/listings/new">
     <button>Create new listing</button>
 </form>
     </ul>
+    <!-- Render one link for every listing supplied by the index route. -->
     <% for(let listing of allListings){%>
      <li><a href="/listings/<%=listing._id%>"><%=listing.title %></a ></li>
     <%}%>
